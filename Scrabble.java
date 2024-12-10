@@ -81,7 +81,7 @@ public class Scrabble {
 	// (these two vowels make it easier for the user to construct words)
 	public static String createHand() {
 		
-		String hand = MyString.randomStringOfLetters(6);
+		String hand = MyString.randomStringOfLetters(8);
 		hand+= "a";
 		hand+= "e";
 		
