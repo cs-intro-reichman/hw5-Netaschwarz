@@ -136,8 +136,6 @@ public class Scrabble {
 	public static void playGame() {
 		// Initializes the dictionary
     	init();
-		// The variable in is set to represent the stream of characters 
-		// coming from the keyboard. Used for getting the user's inputs.  
 		In in = new In();
 
 		while(true) {
@@ -145,9 +143,19 @@ public class Scrabble {
 			// Gets the user's input, which is all the characters entered by 
 			// the user until the user enter the ENTER character.
 			String input = in.readString();
-			//// Replace the following break statement with code
-			//// that completes the game playing loop
-			break;
+			if(input.equals("n")){
+				String h2 = createHand();
+				playHand(h2);
+				
+				 
+			}
+			else if(input.equals("e")){
+				break;
+			}
+			else{
+				System.out.println("Invalid input.try again."); 
+			}
+			
 		}
 	}
 
@@ -157,7 +165,7 @@ public class Scrabble {
 		////testScrabbleScore();    
 		////testCreateHands();  
 		////testPlayHands();
-		////playGame();
+		playGame();
 	}
 
 	public static void testBuildingTheDictionary() {
